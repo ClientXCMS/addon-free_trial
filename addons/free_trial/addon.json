@@ -1,0 +1,13 @@
+{
+    "name": "Free trial",
+    "description": "Free trial",
+    "uuid": "free_trial",
+    "version": "1.0",
+    "author": {
+        "name": "MartinDev",
+        "email": "contact@clientxcms.com"
+    },
+    "providers": [
+        "App\\Addons\\Freetrial\\FreetrialServiceProvider"
+    ]
+}
