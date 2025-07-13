@@ -68,7 +68,7 @@ class FreetrialServiceProvider extends BaseAddonServiceProvider
         // Lors qu'un service est renouvellé, cela veut dire que la période d'essai est terminé
         Event::listen(ServiceRenewed::class, function (ServiceRenewed $event) {
             $service = $event->service;
-            if ($service->trial_end_at != null) {
+            if ($service->trial_ends_at != null) {
                 $service->update(['trial_ends_at' => null]);
                 if ($service->hasMetadata('free_trial_config')) {
                     $trial_config = $service->getMetadata('free_trial_config');

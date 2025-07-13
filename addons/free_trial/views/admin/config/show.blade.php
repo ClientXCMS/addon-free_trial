@@ -11,7 +11,7 @@
 @section('content')
 <div class="max-w-[85rem] py-5 lg:py-7 mx-auto">
     <div class="mx-auto">
-        @include('shared/alerts')
+        @include('admin/shared/alerts')
         <form method="POST" class="card" action="{{ route($routePath . '.update', ['free_trial' => $item]) }}">
             <div class="card-heading">
                 <div>
@@ -35,28 +35,28 @@
             <div class="grid grid-cols-1 md:grid-cols-6 gap-4">
 
                 <div class="flex flex-col col-span-2">
-                    @include('shared/select', ['name' => 'product_id', 'label' => __('global.product'), 'value' => old('product_id', $item->product_id), 'options' => $products])
+                    @include('admin/shared/select', ['name' => 'product_id', 'label' => __('global.product'), 'value' => old('product_id', $item->product_id), 'options' => $products])
                 </div>
                 <div class="flex flex-col col-span-2">
-                    @include('shared/select', ['name' => 'type', 'label' => __('global.type'), 'value' => old('type', $item->type), 'options' => $types])
-                </div>
-
-                <div class="flex flex-col col-span-2">
-                    @include('shared/select', ['name' => 'force', 'label' => __($translatePrefix . '.force_label'), 'value' => old('force', $item->product->hasMetadata('basket_url') ? 'yes' : 'no'), 'options' => $force])
-                </div>
-                <div class="flex flex-col col-span-2">
-                    @include('shared/input', ['name' => 'max_services', 'label' => __($translatePrefix . '.max_services'), 'value' => old('max_services', $item->max_services), 'help' => __($translatePrefix . '.help')])
+                    @include('admin/shared/select', ['name' => 'type', 'label' => __('global.type'), 'value' => old('type', $item->type), 'options' => $types])
                 </div>
 
                 <div class="flex flex-col col-span-2">
-                    @include('shared/input', ['name' => 'trial_days', 'label' => __($translatePrefix . '.trial_days'), 'value' => old('trial_days', $item->trial_days)])
+                    @include('admin/shared/select', ['name' => 'force', 'label' => __($translatePrefix . '.force_label'), 'value' => old('force', $item->product->hasMetadata('basket_url') ? 'yes' : 'no'), 'options' => $force])
+                </div>
+                <div class="flex flex-col col-span-2">
+                    @include('admin/shared/input', ['name' => 'max_services', 'label' => __($translatePrefix . '.max_services'), 'value' => old('max_services', $item->max_services), 'help' => __($translatePrefix . '.help')])
                 </div>
 
                 <div class="flex flex-col col-span-2">
-                    @include('shared/input', ['name' => 'max_allowed_services', 'label' => __($translatePrefix . '.max_allowed_services'), 'value' => old('max_allowed_services', $item->max_allowed_services), 'help' => __($translatePrefix . '.help')])
+                    @include('admin/shared/input', ['name' => 'trial_days', 'label' => __($translatePrefix . '.trial_days'), 'value' => old('trial_days', $item->trial_days)])
+                </div>
+
+                <div class="flex flex-col col-span-2">
+                    @include('admin/shared/input', ['name' => 'max_allowed_services', 'label' => __($translatePrefix . '.max_allowed_services'), 'value' => old('max_allowed_services', $item->max_allowed_services), 'help' => __($translatePrefix . '.help')])
                 </div>
                 <div class="flex flex-col col-span-2">
-                    @include('shared/input', ['name' => 'current_allowed_services', 'label' => __($translatePrefix . '.current_allowed_services'), 'value' => old('current_allowed_services', $item->current_allowed_services)])
+                    @include('admin/shared/input', ['name' => 'current_allowed_services', 'label' => __($translatePrefix . '.current_allowed_services'), 'value' => old('current_allowed_services', $item->current_allowed_services)])
 
                 </div>
                 <input type="hidden" name="id" value="{{ $item->id }}">
