@@ -1,4 +1,4 @@
-@php($gateways = \App\Services\Store\GatewayService::getAvailable($service->getBillingPrice()->price))
+@php($gateways = \App\Services\Store\GatewayService::getAvailable())
 @if ($service->hasMetadata('free_trial_type') && $service->trial_ends_at != null)
     @if ($service->getMetadata('free_trial_type') == 'free')
         <div class="card mt-2">
@@ -43,7 +43,7 @@
             </p>
         @endif
         </div>
-    @else
+    @elseif ($service->getMetadata('free_trial_type') == 'trial')
         @php($products = $service->product->getUpgradeProducts())
         <div class="card mt-2">
 
@@ -67,6 +67,15 @@
                     @endforeach
                 </div>
             @endforeach
+        </div>
+        @elseif ($service->getMetadata('free_trial_type') == 'simple')
+        <div class="card mt-2">
+            <h2 class="text-xl font-semibold text-gray-800 dark:text-gray-200">
+                {{ __('free_trial::lang.service.simple.title') }}
+            </h2>
+            <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">
+                {{ __('free_trial::lang.service.simple.subheading', ['date' => $service->trial_ends_at->format('d/m/y')]) }}
+            </p>
         </div>
         @endif
 @endif

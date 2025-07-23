@@ -29,6 +29,10 @@ return [
             'title' => 'Améliorer votre service d\'essai',
             'subheading' => 'Vous pouvez améliorer votre service d\'essai jusqu\'au :date avant qu\'il soit annulé le :date2.',
         ],
+        'simple' => [
+            'title' => 'Essai simple',
+            'subheading' => 'Vous pouvez juste tester le service jusqu\'au :date sans aucune obligation.',
+        ]
     ],
     'admin' => [
         'config' => [
@@ -48,6 +52,7 @@ return [
             'types' => [
                 'trial' => 'Essai pour amélioration',
                 'free' => 'Essai gratuit',
+                'simple' => 'Essai simple',
             ],
             'force' => [
                 'yes' => 'Les clients seront forcés à l\'essai',

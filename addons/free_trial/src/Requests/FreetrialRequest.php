@@ -17,7 +17,7 @@ class FreetrialRequest extends FormRequest
     {
         return [
             'product_id' => 'required|exists:products,id',
-            'type' => 'in:free,trial',
+            'type' => 'in:free,trial,simple',
             'max_services' => 'integer|required',
             'trial_days' => 'integer|required',
             'current_allowed_services' => 'integer|nullable',
