@@ -6,6 +6,37 @@ use App\Models\Store\Product;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * 
+ *
+ * @property int $id
+ * @property int $product_id
+ * @property int $trial_days
+ * @property int $max_services
+ * @property string $type
+ * @property int $max_renewals
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property int|null $trials
+ * @property int|null $current_allowed_services
+ * @property int|null $max_allowed_services
+ * @property-read Product $product
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|FreetrialConfig newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|FreetrialConfig newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|FreetrialConfig query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|FreetrialConfig whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|FreetrialConfig whereCurrentAllowedServices($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|FreetrialConfig whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|FreetrialConfig whereMaxAllowedServices($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|FreetrialConfig whereMaxRenewals($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|FreetrialConfig whereMaxServices($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|FreetrialConfig whereProductId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|FreetrialConfig whereTrialDays($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|FreetrialConfig whereTrials($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|FreetrialConfig whereType($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|FreetrialConfig whereUpdatedAt($value)
+ * @mixin \Eloquent
+ */
 class FreetrialConfig extends Model
 {
     protected $table = 'freetrial_config';
