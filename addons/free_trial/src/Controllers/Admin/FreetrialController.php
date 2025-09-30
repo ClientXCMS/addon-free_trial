@@ -71,6 +71,6 @@ class FreetrialController extends AbstractCrudController
     public function destroy(FreetrialConfig $free_trial)
     {
         $free_trial->delete();
-        return $this->destroyRedirect();
+        return $this->destroyRedirect($free_trial);
     }
 }
