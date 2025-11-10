@@ -45,6 +45,7 @@ return [
       'current_trials' => 'Ongoing tests',
       'trials_done' => 'Tests carried out',
       'trials_success' => 'Conclusive tests',
+      'show_on_card' => 'Show badge on plans page',
       'help' => '0 to deactivate',
       'force_label' => 'Type of test',
       'types' => [

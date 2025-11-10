@@ -45,6 +45,7 @@ return [
       'current_trials' => 'Ensayos en curso',
       'trials_done' => 'Ensayos realizados',
       'trials_success' => 'Ensayos concluyentes',
+      'show_on_card' => 'Mostrar el badge en la página de los planes',
       'help' => '0 para desactivar',
       'force_label' => 'Tipo de ensayo',
       'types' => [

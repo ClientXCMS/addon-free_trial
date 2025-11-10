@@ -14,6 +14,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property int $trial_days
  * @property int $max_services
  * @property string $type
+ * @property bool $show_on_card
  * @property int $max_renewals
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
@@ -46,6 +47,7 @@ class FreetrialConfig extends Model
         'trial_days',
         'max_services',
         'type',
+        'show_on_card',
         'current_allowed_services',
         'max_allowed_services',
         'trials',
@@ -54,6 +56,7 @@ class FreetrialConfig extends Model
     protected $attributes = [
         'max_services' => 1,
         'type' => 'trial',
+        'show_on_card' => true,
         'trial_days' => 7,
         'max_allowed_services' => 10,
         'current_allowed_services' => 0,

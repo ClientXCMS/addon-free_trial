@@ -40,9 +40,11 @@
                 <div class="flex flex-col col-span-2">
                     @include('admin/shared/select', ['name' => 'type', 'label' => __('global.type'), 'value' => old('type', $item->type), 'options' => $types])
                 </div>
-
                 <div class="flex flex-col col-span-2">
                     @include('admin/shared/select', ['name' => 'force', 'label' => __($translatePrefix . '.force_label'), 'value' => old('force', $item->product->hasMetadata('basket_url') ? 'yes' : 'no'), 'options' => $force])
+                </div>
+                <div class="flex flex-col col-span-6">
+                    @include('admin/shared/checkbox', ['name' => 'show_on_card', 'label' => __($translatePrefix . '.show_on_card'), 'checked' => old('show_on_card', $item->show_on_card)])
                 </div>
                 <div class="flex flex-col col-span-2">
                     @include('admin/shared/input', ['name' => 'max_services', 'label' => __($translatePrefix . '.max_services'), 'value' => old('max_services', $item->max_services), 'help' => __($translatePrefix . '.help')])

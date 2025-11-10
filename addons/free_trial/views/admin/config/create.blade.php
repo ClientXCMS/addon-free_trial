@@ -32,15 +32,17 @@
                     </div>
                     @csrf
                     <div class="grid grid-cols-1 md:grid-cols-6 gap-4">
-                        <div class="flex flex-col col-span-3">
+                        <div class="flex flex-col col-span-2">
                             @include('admin/shared/select', ['name' => 'product_id', 'label' => __('global.product'), 'value' => old('product_id', $item->product_id), 'options' => $products])
                         </div>
-                        <div class="flex flex-col col-span-3">
+                        <div class="flex flex-col col-span-2">
                             @include('admin/shared/select', ['name' => 'type', 'label' => __('global.type'), 'value' => old('type', $item->type), 'options' => $types])
                         </div>
-
-                        <div class="flex flex-col col-span-3">
+                        <div class="flex flex-col col-span-2">
                             @include('admin/shared/select', ['name' => 'force', 'label' => __($translatePrefix . '.force_label'), 'value' => old('force', 'no'), 'options' => $force])
+                        </div>
+                        <div class="flex flex-col col-span-6">
+                            @include('admin/shared/checkbox', ['name' => 'show_on_card', 'label' => __($translatePrefix . '.show_on_card'), 'checked' => old('show_on_card', $item->show_on_card ?? true)])
                         </div>
                         <div class="flex flex-col col-span-2">
                             @include('admin/shared/input', ['name' => 'max_services', 'label' => __($translatePrefix . '.max_services'), 'value' => old('max_services', $item->max_services), 'help' => __($translatePrefix . '.help')])

@@ -1,5 +1,5 @@
 @php($config = \App\Addons\Freetrial\Models\FreetrialConfig::where('product_id', $product->id)->first())
-@if ($config != null)
+@if ($config != null && $config->show_on_card)
     <div class="flex justify-center mb-4">
         <span class="inline-flex items-center gap-x-1.5 px-3 py-1.5 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-800/30 dark:text-green-500">
             <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">

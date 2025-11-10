@@ -13,6 +13,13 @@ class FreetrialRequest extends FormRequest
         return true;
     }
 
+    protected function prepareForValidation()
+    {
+        $this->merge([
+            'show_on_card' => $this->has('show_on_card') && $this->input('show_on_card'),
+        ]);
+    }
+
     public function rules()
     {
         return [
@@ -20,6 +27,7 @@ class FreetrialRequest extends FormRequest
             'type' => 'in:free,trial,simple',
             'max_services' => 'integer|required',
             'trial_days' => 'integer|required',
+            'show_on_card' => 'nullable|boolean',
             'current_allowed_services' => 'integer|nullable',
             'max_allowed_services' => 'integer|required',
             'force' => 'nullable|in:yes,no',
