@@ -29,6 +29,10 @@ return [
       'title' => 'Mejorar su servicio de prueba',
       'subheading' => 'Puedes mejorar tu servicio de prueba hasta el :date antes de que sea cancelado el :date2.',
     ],
+    'simple' => [
+        'title' => 'Prueba simple',
+        'subheading' => 'Puedes probar el servicio hasta el :date sin ninguna obligación.',
+    ],
   ],
   'admin' => [
     'config' => [
