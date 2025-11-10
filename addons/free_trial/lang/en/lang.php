@@ -29,6 +29,10 @@ return [
       'title' => 'Improve your trial service',
       'subheading' => 'You can improve your trial service until :date before it is cancelled on :date2.',
     ],
+    'simple' => [
+        'title' => 'Simple Trial',
+        'subheading' => 'You can simply test the service until :date with no obligation.',
+    ],
   ],
   'admin' => [
     'config' => [
