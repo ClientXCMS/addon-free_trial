@@ -50,6 +50,7 @@ return [
       'types' => [
         'trial' => 'Essay for improvement',
         'free' => 'Free trial',
+        'simple' => 'Simple Trial',
       ],
       'force' => [
         'yes' => 'Customers will be forced to trial.',
