@@ -50,6 +50,7 @@ return [
       'types' => [
         'trial' => 'Ensayo para mejora',
         'free' => 'Prueba gratuita',
+        'simple' => 'Prueba simple',
       ],
       'force' => [
         'yes' => 'Los clientes serán forzados a la prueba',
