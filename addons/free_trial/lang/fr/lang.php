@@ -42,11 +42,15 @@ return [
             'subheading' => 'Configurez vos produits d\'essai gratuit.',
             'max_services' => 'Nombre d\'essais maximum par client',
             'trial_days' => 'Nombre de jours de l\'essai',
+            'trial_durations' => 'Durée de l\'essai',
             'current_trials' => 'Essais en cours',
 
             'trials_done' => 'Essais effectués',
             'trials_success' => 'Essais concluants',
             'show_on_card' => 'Afficher le badge sur la page des plans',
+            'trials_in_progress' => 'Actifs / Max',
+            'success_rate' => 'Concluants / Total',
+            'days' => 'jours',
 
             'help' => '0 pour désactiver',
             'force_label' => 'Type d\'essai',
