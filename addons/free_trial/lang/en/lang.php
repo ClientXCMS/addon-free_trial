@@ -48,7 +48,7 @@ return [
       'trials_success' => 'Conclusive tests',
       'show_on_card' => 'Show badge on plans page',
       'trials_in_progress' => 'Active / Max',
-      'success_rate' => 'Successful / Total',
+      'success_rate' => 'Conclusive / Total',
       'days' => 'days',
       'help' => '0 to deactivate',
       'force_label' => 'Type of test',
