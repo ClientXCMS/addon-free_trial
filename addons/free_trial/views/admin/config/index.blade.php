@@ -160,9 +160,16 @@
                                         <td class="h-px w-px whitespace-nowrap">
                     <span class="block px-6 py-2">
                         <span class="text-sm text-gray-600 dark:text-gray-400">
+                            
+                            @if ($item->product)
                             <a href="{{ route('admin.products.show', ['product' => $item->product]) }}">
                                 {{ $item->product->name }}
                             </a>
+                            @else
+                                <span class="text-red-600 dark:text-red-400">
+                                    {{ __('global.deleted') }}
+                                </span>
+                            @endif
                         </span>
                     </span>
                                         </td>
