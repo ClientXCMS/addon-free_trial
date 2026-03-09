@@ -39,7 +39,7 @@
             </form>
         @else
             <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">
-                {{ __('client.services.renewals.not_autorized_to_change_billing') }}
+                {{ __('client.services.renewals.not_authorized_to_change_billing') }}
             </p>
         @endif
         </div>
