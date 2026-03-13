@@ -7,6 +7,7 @@ use App\Addons\Freetrial\Requests\FreetrialRequest;
 use App\Core\Admin\Dashboard\AdminCountWidget;
 use App\Http\Controllers\Admin\AbstractCrudController;
 use App\Models\Provisioning\Service;
+use App\Models\Billing\InvoiceItem;
 use App\Models\Store\Product;
 
 class FreetrialController extends AbstractCrudController
@@ -69,8 +70,11 @@ class FreetrialController extends AbstractCrudController
     }
 
     public function destroy(FreetrialConfig $free_trial)
-    {
+    {   
+        InvoiceItem::whereNull('delivered_at')->orWhereNull('cancelled_at')->orWhereNull('refunded_at')->where('related_id', $free_trial->id)->where('type', 'free_trial')->update([
+                'cancelled_at' => now(),
+        ]);
         $free_trial->delete();
-        return $this->destroyRedirect();
+        return $this->destroyRedirect($free_trial);
     }
 }
